@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <Windows.h>
+
+void main() {
+
+	//[made by WTIAWTIAW
+
+	int a,i,j,k;
+	system("color 0a");
+	
+	printf("         $         \n");//S=9 *=1
+	printf("         *         \n");//S=9 *=1
+	printf("        ***        \n");//S=8 *=3
+	printf("       *****       \n");//S=7 *=5
+	printf("      *****(*)     \n");//S=6 *=7
+	printf("     *********     \n");//S=5 *=9
+	printf("    *(*)*******    \n");//S=4 *=11
+	printf("   *************   \n");//S=3 *=13
+	printf("  *********(*)***  \n");//S=2 *=15
+	printf(" ***************** \n");//S=1 *=17
+	printf("****(*)************\n");//S=0 *=19
+	printf("*******************\n");//S=0 *=19  19-2S,2*S-1
+	printf("       *****    l  \n");
+	printf("       *****   (*) \n");
+	printf("       *****       \n");
+	printf("     mmmmmmmmm     \n");
+	printf("     *********     \n");
+	printf("     *********     \n");
+	printf("\n-------------------------------------------------\n");
+
+	printf("         $\n");
+	for (i = 1; i <=11; i++) {
+		for (j = 9; j >= i; j--) {
+			printf(" ");
+		}
+		for (k = 1; k <= 2*i-1; k++) {
+			if (i == 4 && k == 6) {
+				printf("(*)"); k += 2;
+			}
+			else if (i == 6 && k == 2) {
+				printf("(*)"); k += 2;
+			}
+			else if (i == 8 && k == 10) {
+				printf("(*)"); k += 2;
+			}
+			else if (i == 9 && k == 3) {
+				printf("(*)"); k += 2;
+			}
+			else if (i == 11 && k==12)k += 1;
+			else printf("*");
+		}
+		printf("\n");
+	}
+	for (i = 0; i < 3; i++) {
+		printf("       *****");
+		if (i == 0)printf("    l\n");
+		else if (i == 1)printf("   (*)\n");
+		else printf("\n");
+	}
+	for (i = 0; i < 3; i++) {
+		if (i == 0)printf("     mmmmmmmmm\n");
+		else printf("     xxxxxxxxx\n");
+	}
+
+
+
+
+
+}
