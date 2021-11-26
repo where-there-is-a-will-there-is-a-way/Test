@@ -1,3 +1,3 @@
 # Test
 first test
-play on C++
+play on C
