@@ -26,7 +26,7 @@ void main() {	// made by WTIAWTIAW
 	printf("     *********     \n");
 	printf("\n-------------------------------------------------\n");
 
-	//- - - - -
+	//- - - - - - - - - -
 
 	printf("         $\n");
 	for (i = 1; i <=11; i++) {
@@ -61,5 +61,4 @@ void main() {	// made by WTIAWTIAW
 		if (i == 0)printf("     mmmmmmmmm\n");
 		else printf("     xxxxxxxxx\n");
 	}
-
 }
