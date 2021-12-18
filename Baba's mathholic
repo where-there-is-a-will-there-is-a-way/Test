@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void plus_minus__main() {	// made by BaBa
+void plus_minus__main() {	// made by Baba
 
 	// 프로토타입 Ver_2
 
@@ -14,7 +14,7 @@ void plus_minus__main() {	// made by BaBa
 
 	for (again = 0; again < 1000;) {
 		if (again >= 1) printf("\n%d번째", again + 1);
-		printf("BaBa의 산술교실에 오신걸 환영합니당!\n수학문제들 풀어보쉴?\n1.가즈아 2.아닝 3.하까마까??(50%확률)\n");
+		printf("Baba의 산술교실에 오신걸 환영합니당!\n수학문제들 풀어보쉴?\n1.가즈아 2.아닝 3.하까마까??(50%확률)\n");
 		scanf_s("%d", &answer);
 		if (answer == 1) {
 			printf("\n오케 함 가봅세~~!\n");
@@ -26,11 +26,11 @@ void plus_minus__main() {	// made by BaBa
 		else if (answer == 3) {	// 할지 안할지 50%확률로 대신 선택해줌
 			randa = rand() % 2;
 			if (rand == 0) {
-				printf("BaBa가 생각해보길..\n\n킨김에 한번 해보고 가시쥬!\n\n");
+				printf("Baba가 생각해보길..\n\n킨김에 한번 해보고 가시쥬!\n\n");
 				goto Plus_Minus;
 			}
 			else {
-				printf("BaBa가 생각해보길..\n\n다음에 진짜 하고싶을때 오시쥬!!\n\n");
+				printf("Baba가 생각해보길..\n\n다음에 진짜 하고싶을때 오시쥬!!\n\n");
 				goto Escape_Loop;
 			}
 		}
