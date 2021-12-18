@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include <math.h>
+
+void plus_minus__main() {	// made by BaBa
+
+	// 프로토타입 Ver_2
+
+	srand(time(NULL));
+
+	int answer = 0, again = 0, dap = 0, i = 0;
+	int randa = 0, randb = 0, yes = 0, no = 0;
+
+	for (again = 0; again < 1000;) {
+		if (again >= 1) printf("\n%d번째", again + 1);
+		printf("BaBa의 산술교실에 오신걸 환영합니당!\n수학문제들 풀어보쉴?\n1.가즈아 2.아닝 3.하까마까??(50%확률)\n");
+		scanf_s("%d", &answer);
+		if (answer == 1) {
+			printf("\n오케 함 가봅세~~!\n");
+			goto Plus_Minus;
+		}
+		else if (answer == 2) {
+			goto Escape_Loop;
+		}
+		else if (answer == 3) {	// 할지 안할지 50%확률로 대신 선택해줌
+			randa = rand() % 2;
+			if (rand == 0) {
+				printf("BaBa가 생각해보길..\n\n킨김에 한번 해보고 가시쥬!\n\n");
+				goto Plus_Minus;
+			}
+			else {
+				printf("BaBa가 생각해보길..\n\n다음에 진짜 하고싶을때 오시쥬!!\n\n");
+				goto Escape_Loop;
+			}
+		}
+		else {	// 1, 2, 3 외에 것을 입력했을시
+			goto Escape_Loop;
+		}
+Plus_Minus:	// 1번혹은 다시하고싶을시
+
+		for (i = 0; i < 10; i++) {
+			randa = rand() % 100;
+			randb = rand() % 100;
+			printf("%3d + %3d = ", randa, randb);
+			scanf_s("%d", &dap);
+			if (dap == randa + randb) {
+				yes++;
+				printf("축~ 정답! (정답 : %d개 오답 : %d개)\n", yes, no);
+			}
+			else {
+				no++;
+				printf("아이궁~ 오답! (정답 : %d개 오답 : %d개)\n", yes, no);
+			}
+		}
+		printf("\n이번 수학교실에서의 당신의 정확도는..\n%d%%입니당!\n", yes * 10);
+		yes = 0;
+		no = 0;
+		again++;
+		// - - Plus_Minus - -
+
+Escape_Loop:	// 2번 혹은 도중에 종료시
+
+		if (answer != 1) {
+			if (answer == 2 || answer == 3) {
+				printf("\n빠이잉\n");
+				again = 1111;
+			}
+			else
+				printf("\n잘못 입력했!\n다시입력하셈!!\n- - - - - - - - - - - - - - - - -\n");
+		}
+	}
+	// - - Escape_Loop - -
