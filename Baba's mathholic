@@ -70,4 +70,4 @@ Escape_Loop:	// 2번 혹은 도중에 종료시
 				printf("\n잘못 입력했센!\n다시입력하셈!!\n- - - - - - - - - - - - - - - - -\n");
 		}
 	}
-	// - - Escape_Loop - -
+	// - - - Escape_Loop - - -
