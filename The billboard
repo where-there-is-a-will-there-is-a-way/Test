@@ -1,0 +1,30 @@
+#include <stdio.h
+#include <windows.h>
+void system_color();
+
+void main() {   // made by WTIAWTIAW
+
+	srand(time(NULL));
+
+	while (1) {
+		printf("\n\n\t**where there is a will**\n       ***there is a way***\n\n");
+		system_color(rand()%10);
+		Sleep(50);
+		system("cls");
+	}
+
+}
+
+
+void system_color(random) {
+	if (random == 0) system("color 04");
+	else if (random == 1) system("color 0c");
+	else if (random == 2) system("color 06");
+	else if (random == 3) system("color 02");
+	else if (random == 4) system("color 01");
+	else if (random == 5) system("color 09");
+	else if (random == 6) system("color 07");
+	else if (random == 7) system("color 05");
+	else if (random == 8) system("color 08");
+	else if (random == 9) system("color 0f");
+}
